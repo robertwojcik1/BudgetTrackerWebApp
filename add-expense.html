@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Aplikacja budżetowa - dodaj wydatek</title>
+	
+	<meta name="description" content="Aplikacja do zarządzania budżetem osobistym" />
+	<meta name="keywords" content="budżet, przychody, wydatki" />
+
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+	<div id="logo">My<strong>Budget</strong></div>
+
+	<div id="container", style="width: 400px; height: 900px;">
+
+		<h1>Dodaj wydatek</h1>
+		<div class="inputField"><input type=”number”, placeholder="Kwota", step="0.01"></div>
+		<div class="inputField"><input type=”date”, placeholder="Data", min="2000-01-01", max="2022-08-31"></div>
+
+		<div class="radioButton">
+			<fieldset>
+				<legend>Sposób płatności</legend>
+				
+				<div><label><input type="radio" value="1" name="payment" checked> Gotówka </label></div>
+				<div><label><input type="radio" value="2" name="payment"> Karta debetowa </label></div>
+				<div><label><input type="radio" value="3" name="payment"> Karta kredytowa </label></div>
+
+			</fieldset>
+			      </div>
+		
+		<div class="radioButton">
+			<fieldset>
+				<legend>Kategoria wydatku</legend>
+						
+				<div><label><input type="radio" value="1" name="category" checked> Jedzenie </label></div>
+				<div><label><input type="radio" value="2" name="category"> Mieszkanie </label></div>
+				<div><label><input type="radio" value="3" name="category"> Transport </label></div>
+				<div><label><input type="radio" value="4" name="category"> Telekomunikacja </label></div>
+				<div><label><input type="radio" value="5" name="category"> Opieka zdrowotna </label></div>
+				<div><label><input type="radio" value="6" name="category"> Ubranie </label></div>
+				<div><label><input type="radio" value="7" name="category"> Higiena </label></div>
+				<div><label><input type="radio" value="8" name="category"> Dzieci </label></div>
+				<div><label><input type="radio" value="9" name="category"> Rozrywka </label></div>
+				<div><label><input type="radio" value="10" name="category"> Wycieczka </label></div>
+				<div><label><input type="radio" value="11" name="category"> Szkolenia </label></div>
+				<div><label><input type="radio" value="12" name="category"> Książki </label></div>
+				<div><label><input type="radio" value="13" name="category"> Oszczędności </label></div>
+				<div><label><input type="radio" value="14" name="category"> Na złotą jesień, czyli emeryturę </label></div>
+				<div><label><input type="radio" value="15" name="category"> Spłata długów </label></div>
+				<div><label><input type="radio" value="16" name="category"> Darowizna </label></div>
+				<div><label><input type="radio" value="17" name="category"> Inne wydatki </label></div>
+		
+			</fieldset>
+					</div>
+
+		<div class="inputField"><input type=”text”, placeholder="Komentarz(opcjonalnie)"></div>
+		<div class="button"><button type="submit">Dodaj</button></div>
+        <div class="button"><button type=”button”>Anuluj</button></div>
+
+	</div>
+
+	<div id="footer">&copy; 2022 MyBudget.pl</div>
+	
+</body>
+</html>
