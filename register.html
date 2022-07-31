@@ -19,15 +19,20 @@
 <body>
 	<div id="logo">My<strong>Budget</strong></div>
 
-	<div id="container", style="width: 400px; height: 400px;">
+	<div id="container" style="width: 400px; height: 500px;">
 
 		<h1>Rejestracja</h1>
-		<div class="inputField"><input type=”text”, placeholder="Imię"></div>
-		<div class="inputField"><input type=”email”, placeholder="E-mail"></div>
-		<div class="inputField"><input type=”password”, placeholder="Hasło"></div>
-		<div class="inputField"><input type=”password”, placeholder="Powtórz hasło"></div>
-		<div class="button"><button type="submit">Załóż konto</button></div>
-		<div class="button"><button type=”button”>Anuluj</button></div>
+
+		<form action="login.php" method="post">
+
+		<div class="inputField"><label><input type=”text” placeholder="Imię" required></label></div>
+		<div class="inputField"><label><input type=”email” placeholder="E-mail" required></label></div>
+		<div class="inputField"><label><input type=”password” placeholder="Hasło" required></label></div>
+		<div class="inputField"><label><input type=”password” placeholder="Powtórz hasło" required></label></div>
+		<div class="button"><label><button type="submit">Załóż konto</button></label></div>
+		<div class="button"><label><button type=”button”>Anuluj</button></label></div>
+
+		</form>
 	</div>
 
 	<div id="footer">&copy; 2022 MyBudget.pl</div>

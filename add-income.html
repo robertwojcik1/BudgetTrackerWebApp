@@ -19,11 +19,14 @@
 <body>
 	<div id="logo">My<strong>Budget</strong></div>
 
-	<div id="container", style="width: 400px; height: 500px;">
+	<div id="container" style="width: 400px; height: 600px;">
 
 		<h1>Dodaj przychód</h1>
-		<div class="inputField"><input type=”number”, placeholder="Kwota", step="0.01"></div>
-		<div class="inputField"><input type=”date”, placeholder="Data", min="2000-01-01", max="2022-08-31"></div>
+
+		<form action="login.php" method="post">
+
+		<div class="inputField"><label><input type=number placeholder="Kwota" step="0.01"></label></div>
+		<div class="inputField"><label><input type="date" placeholder="Data" min="2000-01-01" max="2022-08-31"></label></div>
 
 		<div class="radioButton">
 			<fieldset>
@@ -37,12 +40,11 @@
 			</fieldset>
 			      </div>
 
-		<div class="inputField"><input type=”text”, placeholder="Komentarz(opcjonalnie)"></div>
-		<div class="button"><button type="submit">Dodaj</button></div>
-        <div class="button"><button type=”button”>Anuluj</button></div>
+				  <div class="inputField"><label><textarea placeholder="Komentarz(opcjonalnie)" maxlength="150" rows="3" cols="35"></textarea></label></div>
+		<div class="button"><label><button type="submit">Dodaj</button></label></div>
+        <div class="button"><label><button type=”button”>Anuluj</button></label></div>
 
-
-
+		</form>
 	</div>
 
 	<div id="footer">&copy; 2022 MyBudget.pl</div>

@@ -1,6 +1,6 @@
 body
 {
-    background-color: #181524;
+    background-color: #5f6c82;
     font-family: 'Open Sans', sans-serif;
     color: #636363;
 }
@@ -17,6 +17,12 @@ h1
     text-align: center;
 }
 
+button
+{
+    width: 200px;
+    height: 40px;
+}
+
 #container
 {
     background-color: #ebebed;
@@ -25,13 +31,16 @@ h1
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-
+    -webkit-box-shadow: 7px 7px 5px -1px rgba(5, 5, 12, 1);
+    -moz-box-shadow: 7px 7px 5px -1px rgba(5, 5, 12, 1);
+    box-shadow: 7px 7px 5px -1px rgba(5, 5, 12, 1);
 }
 
 #footer
 {
     text-align: center;
-    margin-bottom: 0px;
+    margin-top: 3px;
+    color: black;
 }
 
 .inputField
@@ -47,6 +56,7 @@ h1
     height: 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15px;
     padding: 10px;
 }
 
@@ -70,3 +80,5 @@ h1
     text-align: center;
     font-size: 14px;
 }
+
+
