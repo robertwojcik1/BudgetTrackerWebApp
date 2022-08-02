@@ -5,6 +5,11 @@ body
     color: #636363;
 }
 
+textarea
+{
+    resize: none;
+}
+
 #logo
 {
     font-size: 48px;
@@ -45,6 +50,7 @@ button
 
 .inputField
 {
+    clear: both;
     text-align: center;
     padding: 10px;
 }
@@ -81,4 +87,46 @@ button
     font-size: 14px;
 }
 
+.window
+{
+    float: left;
+    width: 450px;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    border: 1px;
+    border-style: dashed;
+}
+
+ul > li
+{
+    list-style-type:decimal-leading-zero;
+    margin-bottom: 7px;
+}
+
+.balance
+{
+    margin-left: auto;
+	margin-right: auto;
+    text-align: center;
+    width: 500px;
+    height: 200px;
+    clear: both;
+    margin-bottom: 30px;
+    border: 1px;
+    border-style: dashed;
+}
+
+.chart
+{
+    margin-left: auto;
+	margin-right: auto;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    border: 1px;
+    border-style: dashed;
+}
 

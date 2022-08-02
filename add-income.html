@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	
 	<title>Aplikacja budżetowa - dodaj przychód</title>
 	
@@ -25,8 +25,8 @@
 
 		<form action="login.php" method="post">
 
-		<div class="inputField"><label><input type=number placeholder="Kwota" step="0.01" required></label></div>
-		<div class="inputField"><label><input type="date" placeholder="Data" min="2000-01-01" max="2022-08-31" required></label></div>
+		<div class="inputField"><label><input type=number placeholder="Kwota" step="0.01" min="0" max="1000000" required></label></div>
+		<div class="inputField"><label><input type="date" min="2000-01-01" max="2022-08-31" required></label></div>
 
 		<div class="radioButton">
 			<fieldset>
@@ -42,7 +42,7 @@
 
 				  <div class="inputField"><label><textarea placeholder="Komentarz(opcjonalnie)" maxlength="150" rows="3" cols="35"></textarea></label></div>
 		<div class="button"><label><button type="submit">Dodaj</button></label></div>
-        <div class="button"><label><button type=”button”>Anuluj</button></label></div>
+        <div class="button"><label><button type="button">Anuluj</button></label></div>
 
 		</form>
 	</div>

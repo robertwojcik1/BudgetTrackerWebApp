@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	
 	<title>Aplikacja budżetowa - bilans</title>
 	
@@ -19,7 +19,7 @@
 <body>
 	<div id="logo">My<strong>Budget</strong></div>
 
-	<div id="container">
+	<div id="container" style="height:1400px">
 
 		<form>
         	<div class="dropdownMenu">
@@ -35,8 +35,37 @@
         	</div>
 		</form>
 
-        <h1>Bilans</h1>
-	
+        <h1> Bilans z wybranego okresu </h1>
+
+		<div class="window"> 
+			<h2>Przychody</h2> 
+			<ul>
+				<li> Wynagrodzenie: 5000<br /> data 01-01-2022  </li>
+				<li> Sprzedaż na allegro: 1200<br /> data 03-04-2022, komentarz: komputer </li>
+				<li> Odsetki bankowe: 150 <br /> data 05-06-2022, komentarz: mBank </li>
+			</ul>
+			<b>Suma przychodów: 6350</b>
+		</div>
+
+		<div class="window"> 
+			<h2> Wydatki </h2>
+			<ul>
+				<li> Jedzenie: 500 <br /> data 12-03-2022 </li>
+				<li> Opieka zdrowotna: 300 <br /> data 03-04-2022, komentarz: dentysta </li>
+				<li> Rozrywka: 100 <br /> data 05-06-2022, komentarz: kino </li>
+			</ul>
+			<b>Suma wydatków: 900</b>
+			 </div>
+
+		<div class="balance">
+				<h2> Bilans </h2>
+				<b> 5450 </b> <br />
+				Gratulacje! Świetnie zarządzasz swoim budżetem.
+		</div>
+
+		<div class="chart">
+				(miejsce  na diagram kołowy)
+		</div>
 	</div>
 
 	<div id="footer">&copy; 2022 MyBudget.pl</div>
