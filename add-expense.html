@@ -12,7 +12,7 @@
 	<meta name="keywords" content="budżet, przychody, wydatki" />
 
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
-	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -40,66 +40,67 @@
 		<section>
 			<div class="container" style="width: 400px; height: 600px;">
 				<h1><em>Dodaj wydatek</em></h1>
-				<form action="login.php" method="post">
-						<div class="input-group mb-3">
-							<div><label><input type="number" class="form-control" placeholder="Kwota" step="0.01"
-										min="0" max="1000000" required
-										aria-label="Cash amount (with dot and two decimal places)"></label></div>
-							<span class="input-group-text">PLN</span>
-						</div>
+				<form>
+					<div class="input-group mb-3">
+						<div><label><input type="number" class="form-control" placeholder="Kwota" step="0.01" min="0"
+									max="1000000" required
+									aria-label="Cash amount (with dot and two decimal places)"></label></div>
+						<span class="input-group-text">PLN</span>
+					</div>
 
-						<div class="input-group mb-3">
-							<div><label><input type="date" class="form-control" min="2000-01-01" max="2022-09-30"
+					<div class="input-group mb-3">
+						<div><label><input type="date" class="form-control" min="2000-01-01" max="2022-09-30"
 									required></label></div>
-							<span class="input-group-text">Data</span>
-						</div>
+						<span class="input-group-text">Data</span>
+					</div>
 
-						<div class="mb-3">
-							<select class="form-select" aria-label="Default select example">
-								<option selected>Wybierz sposób płatności</option>
-								<option value="1">Gotówka</option>
-								<option value="2">Karta debetowa</option>
-								<option value="3">Karta kredytowa</option>
-							</select>
-						</div>
-			
+					<div class="mb-3">
+						<select class="form-select" aria-label="Default select example">
+							<option selected>Wybierz sposób płatności</option>
+							<option value="1">Gotówka</option>
+							<option value="2">Karta debetowa</option>
+							<option value="3">Karta kredytowa</option>
+						</select>
+					</div>
 
-						<div class="mb-3">
-							<select class="form-select" aria-label="Default select example">
-								<option selected>Wybierz kategorię wydatku</option>
-								<option value="4">Jedzenie</option>
-								<option value="5">Mieszkanie</option>
-								<option value="6">Transport</option>
-								<option value="7">Telekomunikacja</option>
-								<option value="8">Opieka zdrowotna</option>
-								<option value="9">Ubranie</option>
-								<option value="10">Higiena</option>
-								<option value="11">Dzieci</option>
-			 					<option value="12">Rozrywka</option>
-								<option value="13">Wycieczka</option>
-								<option value="14">Szkolenia</option>
-								<option value="15">Książki</option>
-								<option value="16">Oszczędności</option>
-								<option value="17">Na złotą jesień, czyli emeryturę</option>
-								<option value="18">Spłata długów</option>
-								<option value="19">Darowizna</option>
-								<option value="20">Inne wydatki</option>
-							</select>
-						</div>
-			
-						<div class="mb-3">
-							<label><textarea class="form-control" id="exampleFormControlTextarea1"
-							placeholder="Komentarz(opcjonalnie)" maxlength="150" rows="3" cols="35"></textarea></label>
-						</div>
 
-						<div class="form-check">
-							<label><button type="submit" class="btn btn-success">Dodaj</button></label>
-						</div>
+					<div class="mb-3">
+						<select class="form-select" aria-label="Default select example">
+							<option selected>Wybierz kategorię wydatku</option>
+							<option value="4">Jedzenie</option>
+							<option value="5">Mieszkanie</option>
+							<option value="6">Transport</option>
+							<option value="7">Telekomunikacja</option>
+							<option value="8">Opieka zdrowotna</option>
+							<option value="9">Ubranie</option>
+							<option value="10">Higiena</option>
+							<option value="11">Dzieci</option>
+							<option value="12">Rozrywka</option>
+							<option value="13">Wycieczka</option>
+							<option value="14">Szkolenia</option>
+							<option value="15">Książki</option>
+							<option value="16">Oszczędności</option>
+							<option value="17">Na złotą jesień, czyli emeryturę</option>
+							<option value="18">Spłata długów</option>
+							<option value="19">Darowizna</option>
+							<option value="20">Inne wydatki</option>
+						</select>
+					</div>
 
-						<div class="form-check">
-							<label><button type="button" class="btn btn-secondary">Anuluj</button></label>
-			 			</div>
-						
+					<div class="mb-3">
+						<label><textarea class="form-control" id="exampleFormControlTextarea1"
+								placeholder="Komentarz(opcjonalnie)" maxlength="150" rows="3"
+								cols="35"></textarea></label>
+					</div>
+
+					<div class="form-check">
+						<label><button type="submit" class="btn btn-success">Dodaj</button></label>
+					</div>
+
+					<div class="form-check">
+						<label><button type="button" class="btn btn-secondary">Anuluj</button></label>
+					</div>
+
 				</form>
 			</div>
 		</section>
@@ -119,4 +120,5 @@
 	<script src="js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

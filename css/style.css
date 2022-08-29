@@ -5,11 +5,7 @@ body
     color: #636363;
 }
 
-<<<<<<< HEAD
-header
-=======
 #header
->>>>>>> 322d3246377d1493f9ea6b1abbfc27582697d6d4
 {
     height: 200px;
     width: 100%;
@@ -57,7 +53,6 @@ button
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-
 }
 
 .container
@@ -166,7 +161,6 @@ ul > li
 
 .center
 {
-<<<<<<< HEAD
     text-align: center; 
 }
 
@@ -174,9 +168,7 @@ ul > li
 {
     text-align: right;
     margin-left: 60%;
-=======
     text-align: center;
->>>>>>> 322d3246377d1493f9ea6b1abbfc27582697d6d4
 }
 
 
