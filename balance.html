@@ -22,8 +22,7 @@
 <body>
 
 	<header>
-		<div id="logo"><img src="img/logo.png" class="img-fluid rounded mx-auto d-block" alt="logo.png"></div>
-		<br>
+		<div id="logo"><a href="main-menu.html">MyBudget.pl</a></div>
 		<div id="sentence">
 			<figure>
 				<blockquote class="blockquote text-center">
@@ -34,12 +33,40 @@
 				</figcaption>
 			</figure>
 		</div>
+
+		<nav class="navbar navbar-expand-lg bg-light">
+			<div class="container-fluid">
+			  <a class="navbar-brand" href="#">Menu główne</a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+				  <li class="nav-item">
+					<a class="nav-link" aria-current="page" href="add-income.html">Dodaj przychód</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="add-expense.html">Dodaj wydatek</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="balance.html">Przeglądaj bilans</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Ustawienia</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="index.html">Wyloguj</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
 	</header>
 
 	<main>
 		<section>
 			<div class="container" style="width: 1200px; height: 1400px;">
-				<h1><em>Bilans z wybranego okresu</em></h1>
+				<br><br><h1><em>Bilans z wybranego okresu</em></h1>
 				<form>
 					<div class="dateRange">
 						<select class="form-select" aria-label="Default select example">
