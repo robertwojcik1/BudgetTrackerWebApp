@@ -216,4 +216,14 @@ ul > li
     font-weight: 600;
 }
 
+.btn-success, .btn-secondary
+{
+width: 200px;
+height: 50px;
+}
+
+.form-control
+{
+    width: 300px;
+}
 
