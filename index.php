@@ -1,3 +1,15 @@
+<?php
+
+	session_start();
+	
+	if ((isset($_SESSION['logged'])) && ($_SESSION['logged']==true))
+	{
+		header('Location: main-menu.php');
+		exit();
+	}
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -22,7 +34,7 @@
 <body>
 
 	<header>
-		<div id="logo"><a href="main-menu.html">MyBudget.pl</a></div>
+		<div id="logo"><a href="index.html">MyBudget.pl</a></div>
 		<div id="sentence">
 			<figure>
 				<blockquote class="blockquote text-center">
@@ -33,42 +45,42 @@
 				</figcaption>
 			</figure>
 		</div>
-
-		<nav class="navbar navbar-expand-lg bg-light">
-			<div class="container-fluid">
-			  <a class="navbar-brand" href="#">Menu główne</a>
-			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			  </button>
-			  <div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-				  <li class="nav-item">
-					<a class="nav-link" aria-current="page" href="add-income.html">Dodaj przychód</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="add-expense.html">Dodaj wydatek</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="balance.html">Przeglądaj bilans</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="#">Ustawienia</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="index.html">Wyloguj</a>
-				  </li>
-				</ul>
-			  </div>
-			</div>
-		  </nav>
-
 	</header>
 
 	<main>
 		<section>
-			<div class="container" style="width: 800px; height: 700px;">
-				<br><br><div class="center"><h2>Co chcesz teraz zrobić?</h2></div>
+			<div class="container" style="width: 400px">
+				<h1><em>Logowanie</em></h1>
+				<div id="photo">
+					<img src="img/img1.png" class="img-fluid" alt="img1.png">
+				</div>
+				<form action="login.php" method="post">
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label"></label>
+						<input type="email" class="form-control" placeholder="E-mail" name="login" required id="exampleInputEmail1"
+							aria-describedby="exampleInputEmail1">
+					</div>
+					<div class="mb-3">
+						<label for="exampleInputPassword1" class="form-label"></label>
+						<input type="password" class="form-control" name="password" placeholder="Hasło" id="exampleInputPassword1"
+							required>
+					</div>
+					<div class="button"><label><button type="submit" class="btn btn-success">Zaloguj</button></label>
+					</div>
+				</form>
+				<br>
+				<br>
+				<div class="text">Nie masz konta? Zarejestruj się.</div>
+				<div class="button"><label><a class="btn btn-secondary" href="register.html"
+							role="button">Rejestracja</a></label>
+				</div>
+
 			</div>
+
+<?php
+
+	if(isset($_SESSION['error']))	echo $_SESSION['error'];
+?>
 
 		</section>
 

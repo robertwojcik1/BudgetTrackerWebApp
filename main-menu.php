@@ -1,3 +1,15 @@
+<?php
+
+	session_start();
+	
+	if (!isset($_SESSION['logged']))
+	{
+		header('Location: index.php');
+		exit();
+	}
+	
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -42,7 +54,7 @@
 					<a class="nav-link" href="#">Ustawienia</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="index.php">Wyloguj</a>
+					<a class="nav-link" href="logout.php" >Wyloguj</a>
 				  </li>
 				</ul>
 			  </div>
@@ -62,48 +74,11 @@
 				</figure>
 			</div>
 		</header>
-	
+
 	<main>
 		<section>
-			<div class="container" style="width: 400px">
-				<br><br><h1><em>Dodaj przychód</em></h1>
-				<form>
-
-					<div class="input-group mb-3">
-						<div><label><input type="number" class="form-control" placeholder="Kwota" step="0.01" min="0"
-									max="1000000" required
-									aria-label="Cash amount (with dot and two decimal places)"></label></div>
-						<span class="input-group-text">PLN</span>
-					</div>
-
-					<div class="input-group mb-3">
-						<div><label><input type="date" class="form-control" id="datepicker" min="2000-01-01" max="2022-08-31"
-									required></label></div>
-						<span class="input-group-text">Data</span>
-					</div>
-
-					<div class="mb-3">
-						<select class="form-select" aria-label="Default select example">
-							<option selected>Kategoria przychodu</option>
-							<option value="1">Wynagrodzenie</option>
-							<option value="2">Odsetki bankowe</option>
-							<option value="3">Sprzedaż na allegro</option>
-							<option value="4">Inne</option>
-						</select>
-					</div>
-
-					<div class="mb-3">
-						<label><textarea class="form-control" id="exampleFormControlTextarea1"
-								placeholder="Komentarz(opcjonalnie)" maxlength="150" rows="3"
-								cols="35"></textarea></label>
-					</div>
-					<div class="form-check">
-						<label><button type="submit" class="btn btn-success">Dodaj</button></label>
-					</div>
-					<div class="form-check">
-						<label><a class="btn btn-secondary" href="main-menu.html" role="button">Anuluj</a></label>
-					</div>
-				</form>
+			<div class="container" style="width: 800px">
+				<br><br><div class="center"><h2>Co chcesz teraz zrobić?</h2></div>
 			</div>
 
 		</section>
@@ -121,7 +96,6 @@
 		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
 		crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/today.js"></script>
 
 </body>
 
