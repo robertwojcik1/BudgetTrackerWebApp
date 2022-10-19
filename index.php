@@ -1,12 +1,11 @@
 <?php
 
-	session_start();
-	
-	if ((isset($_SESSION['logged'])) && ($_SESSION['logged']==true))
-	{
-		header('Location: main-menu.php');
-		exit();
-	}
+session_start();
+
+if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
+	header('Location: main-menu.php');
+	exit();
+}
 
 ?>
 
@@ -34,7 +33,7 @@
 <body>
 
 	<header>
-		<div id="logo"><a href="index.html">MyBudget.pl</a></div>
+		<div id="logo"><a href="index.php">MyBudget.pl</a></div>
 		<div id="sentence">
 			<figure>
 				<blockquote class="blockquote text-center">
@@ -57,13 +56,11 @@
 				<form action="login.php" method="post">
 					<div class="mb-3">
 						<label for="exampleInputEmail1" class="form-label"></label>
-						<input type="email" class="form-control" placeholder="E-mail" name="login" required id="exampleInputEmail1"
-							aria-describedby="exampleInputEmail1">
+						<input type="email" class="form-control" placeholder="E-mail" name="login" required id="exampleInputEmail1" aria-describedby="exampleInputEmail1">
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label"></label>
-						<input type="password" class="form-control" name="password" placeholder="Hasło" id="exampleInputPassword1"
-							required>
+						<input type="password" class="form-control" name="password" placeholder="Hasło" id="exampleInputPassword1" required>
 					</div>
 					<div class="button"><label><button type="submit" class="btn btn-success">Zaloguj</button></label>
 					</div>
@@ -71,16 +68,15 @@
 				<br>
 				<br>
 				<div class="text">Nie masz konta? Zarejestruj się.</div>
-				<div class="button"><label><a class="btn btn-secondary" href="register.html"
-							role="button">Rejestracja</a></label>
+				<div class="button"><label><a class="btn btn-secondary" href="register.php" role="button">Rejestracja</a></label>
 				</div>
 
 			</div>
 
-<?php
+			<?php
 
-	if(isset($_SESSION['error']))	echo $_SESSION['error'];
-?>
+			if (isset($_SESSION['error']))	echo $_SESSION['error'];
+			?>
 
 		</section>
 
@@ -90,12 +86,8 @@
 
 	</main>
 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
-		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
 
 </body>
