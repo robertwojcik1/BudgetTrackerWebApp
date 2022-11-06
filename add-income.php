@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['logged'])) {
+    header('Location: index.php');
+    exit();
+}
+
+?>
+
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -33,7 +44,7 @@
 					<a class="nav-link" aria-current="page" href="add-income.html">Dodaj przychód</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="add-expense.html">Dodaj wydatek</a>
+					<a class="nav-link" href="add-expense.php">Dodaj wydatek</a>
 				  </li>
 				  <li class="nav-item">
 					<a class="nav-link" href="balance.html">Przeglądaj bilans</a>
@@ -73,13 +84,11 @@
 						<div><label><input type="number" class="form-control" placeholder="Kwota" step="0.01" min="0"
 									max="1000000" required
 									aria-label="Cash amount (with dot and two decimal places)"></label></div>
-						<span class="input-group-text">PLN</span>
 					</div>
 
 					<div class="input-group mb-3">
 						<div><label><input type="date" class="form-control" id="datepicker" min="2000-01-01" max="2022-08-31"
 									required></label></div>
-						<span class="input-group-text">Data</span>
 					</div>
 
 					<div class="mb-3">

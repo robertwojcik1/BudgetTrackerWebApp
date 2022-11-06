@@ -33,6 +33,7 @@ if ($connect->connect_errno != 0) {
                 $_SESSION['logged'] = true;
                 $_SESSION['login'] = $row['email'];
                 $_SESSION['password'] = $row['password'];
+                $_SESSION['user_id'] = $row['id'];
 
                 unset($_SESSION['error']);
                 $result->free_result();
@@ -48,3 +49,4 @@ if ($connect->connect_errno != 0) {
     }
     $connect->close();
 }
+?>

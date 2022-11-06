@@ -12,7 +12,7 @@ if (isset($_POST['email'])) {
 		$_SESSION['e_name'] = "Imię musi posiadać od 3 do 20 znaków!";
 	}
 
-	if (ctype_alnum($name) == false) {
+	if (!ctype_alnum($name)) {
 		$all_fine = false;
 		$_SESSION['e_name'] = "Imię może składać się tylko z liter i cyfr (bez polskich znaków)";
 	}
@@ -63,10 +63,13 @@ if (isset($_POST['email'])) {
 				$_SESSION['e_email'] = "Istnieje już konto przypisane do tego adresu e-mail!";
 			}
 
-			if ($all_fine == true) {
+			if ($all_fine) {
 
 				if ($connect->query("INSERT INTO users VALUES (NULL, '$name', '$password_hash', '$email')")) {
 					$_SESSION['registration_success'] = true;
+
+                    $connect->query("INSERT INTO expenses_category_assigned_to_users (name) SELECT 
+                                                                    expenses_category_default.name FROM expenses_category_default");
 					header('Location: welcome.php');
 				} else {
 					throw new Exception($connect->error);
@@ -79,6 +82,7 @@ if (isset($_POST['email'])) {
 		echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy o rejestrację w innym terminie!</span>';
 	}
 }
+
 ?>
 
 <!DOCTYPE HTML>
@@ -126,13 +130,8 @@ if (isset($_POST['email'])) {
                     <form method="post">
                         <div class="mb-3">
                             <label for="name">Imię </label>
-                            <input class="form-control" type="text" name="name" id="name" value="
-							<?php
-							if (isset($_SESSION['fr_name'])) {
-								echo $_SESSION['fr_name'];
-								unset($_SESSION['fr_name']);
-							}
-							?>" aria-label="podaj imię" required>
+                            <input class="form-control" type="text" name="name" id="name" value=""
+                                aria-label="podaj imię" required>
                         </div>
 
                         <?php
@@ -144,14 +143,7 @@ if (isset($_POST['email'])) {
 
                         <div class="mb-3">
                             <label for="email">E-mail </label>
-                            <input type="email" class="form-control" name="email" value="
-							<?php
-							if (isset($_SESSION['fr_email'])) {
-								echo $_SESSION['fr_email'];
-								unset($_SESSION['fr_email']);
-							}
-							?>" id="email" required>
-
+                            <input type="email" class="form-control" name="email" value="" id="email" required>
                         </div>
                         <?php
 						if (isset($_SESSION['e_email'])) {
@@ -161,13 +153,8 @@ if (isset($_POST['email'])) {
 						?>
                         <div class="mb-3">
                             <label for="password1">Hasło</label>
-                            <input type="password" class="form-control" name="password1" value="
-							<?php
-							if (isset($_SESSION['fr_password1'])) {
-								echo $_SESSION['fr_password1'];
-								unset($_SESSION['fr_password1']);
-							}
-							?>" id="password1" required>
+                            <input type="password" class="form-control" name="password1" value="" id="password1"
+                                required>
                         </div>
                         <?php
 						if (isset($_SESSION['e_password'])) {
@@ -177,13 +164,8 @@ if (isset($_POST['email'])) {
 						?>
                         <div class="mb-3">
                             <label for="password2">Powtórz hasło</label>
-                            <input type="password" class="form-control" name="password2" value="
-							<?php
-							if (isset($_SESSION['fr_password2'])) {
-								echo $_SESSION['fr_password2'];
-								unset($_SESSION['fr_password2']);
-							}
-							?>" id="password2" required>
+                            <input type="password" class="form-control" name="password2" value="" id="password2"
+                                required>
                         </div>
                         <label><button type="submit" class="btn btn-success">Załóz konto</button></label><br><br>
                     </form>

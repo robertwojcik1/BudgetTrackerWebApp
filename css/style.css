@@ -15,6 +15,7 @@ a {
 header {
     height: 150px;
     width: 100%;
+    margin-bottom: 140px;
 }
 
 textarea {
@@ -53,16 +54,8 @@ button {
     height: 40px;
 }
 
-#container {
-    background-color: #f5f5f5;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-}
-
 .container {
-    display: block;
+    background-color: white;
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
@@ -71,7 +64,7 @@ button {
 }
 
 .container-sm {
-    display: inline-block;
+    display: flex;
 }
 
 #photos {
@@ -135,7 +128,7 @@ button {
 }
 
 ul>li {
-    list-style-type: decimal-leading-zero;
+    list-style-type: none;
     margin-bottom: 7px;
 }
 
@@ -187,10 +180,6 @@ ul>li {
     display: block;
 }
 
-ul>li {
-    list-style-type: none;
-}
-
 .navbar-brand {
     font-weight: 600;
 }
@@ -207,4 +196,9 @@ ul>li {
 
 .form-control {
     display: inline-block;
+}
+
+.form-label {
+    display: block;
+    text-align: left;
 }
