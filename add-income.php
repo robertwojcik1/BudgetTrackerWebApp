@@ -41,13 +41,13 @@ if (!isset($_SESSION['logged'])) {
 			  <div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 				  <li class="nav-item">
-					<a class="nav-link" aria-current="page" href="add-income.html">Dodaj przychód</a>
+					<a class="nav-link" aria-current="page" href="add-income.php">Dodaj przychód</a>
 				  </li>
 				  <li class="nav-item">
 					<a class="nav-link" href="add-expense.php">Dodaj wydatek</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="balance.html">Przeglądaj bilans</a>
+					<a class="nav-link" href="balance.php">Przeglądaj bilans</a>
 				  </li>
 				  <li class="nav-item">
 					<a class="nav-link" href="#">Ustawienia</a>
@@ -81,36 +81,36 @@ if (!isset($_SESSION['logged'])) {
 				<form>
 
 					<div class="input-group mb-3">
-						<div><label><input type="number" class="form-control" placeholder="Kwota" step="0.01" min="0"
+						<div><label for="amount"><input type="number" class="form-control" placeholder="Kwota" id="amount" step="0.01" min="0"
 									max="1000000" required
 									aria-label="Cash amount (with dot and two decimal places)"></label></div>
 					</div>
 
 					<div class="input-group mb-3">
-						<div><label><input type="date" class="form-control" id="datepicker" min="2000-01-01" max="2022-08-31"
+						<div><label for="datepicker"><input type="date" class="form-control" id="datepicker" min="2000-01-01" max="2022-12-31"
 									required></label></div>
 					</div>
 
 					<div class="mb-3">
+						Kategoria przychodu
 						<select class="form-select" aria-label="Default select example">
-							<option selected>Kategoria przychodu</option>
-							<option value="1">Wynagrodzenie</option>
-							<option value="2">Odsetki bankowe</option>
-							<option value="3">Sprzedaż na allegro</option>
-							<option value="4">Inne</option>
+							<option value="Salary">Wynagrodzenie</option>
+							<option value="BankInterest">Odsetki bankowe</option>
+							<option value="Allegro">Sprzedaż na allegro</option>
+							<option value="Other">Inne</option>
 						</select>
 					</div>
 
 					<div class="mb-3">
-						<label><textarea class="form-control" id="exampleFormControlTextarea1"
-								placeholder="Komentarz(opcjonalnie)" maxlength="150" rows="3"
+						<label for="comment"><textarea class="form-control" id="comment"
+								placeholder="Komentarz (opcjonalnie)" maxlength="150" rows="3"
 								cols="35"></textarea></label>
 					</div>
 					<div class="form-check">
-						<label><button type="submit" class="btn btn-success">Dodaj</button></label>
+						<label for="submit"><button type="submit" class="btn btn-success" id="submit">Dodaj</button></label>
 					</div>
 					<div class="form-check">
-						<label><a class="btn btn-secondary" href="main-menu.html" role="button">Anuluj</a></label>
+						<label for="cancel"><a class="btn btn-secondary" href="main-menu.html" role="button" id="cancel">Anuluj</a></label>
 					</div>
 				</form>
 			</div>

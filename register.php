@@ -68,8 +68,14 @@ if (isset($_POST['email'])) {
 				if ($connect->query("INSERT INTO users VALUES (NULL, '$name', '$password_hash', '$email')")) {
 					$_SESSION['registration_success'] = true;
 
-                    $connect->query("INSERT INTO expenses_category_assigned_to_users (name) SELECT 
-                                                                    expenses_category_default.name FROM expenses_category_default");
+                    $registered_user_id = $connect->insert_id;
+                    $connect->query("INSERT INTO expenses_category_assigned_to_users (user_id, name) SELECT '$registered_user_id' AS user_id, name FROM expenses_category_default;");
+                    $connect->query("SET @max_id = (SELECT MAX(id) FROM expenses_category_assigned_to_users) + 1;");
+                    $connect->query("#SELECT @max_id;");
+                    $connect->query("SET @sql = CONCAT('ALTER TABLE `expenses_category_assigned_to_users` AUTO_INCREMENT = ', @max_id);");
+                    $connect->query("PREPARE stmt FROM @sql;");
+                    $connect->query("EXECUTE stmt;");
+                    
 					header('Location: welcome.php');
 				} else {
 					throw new Exception($connect->error);

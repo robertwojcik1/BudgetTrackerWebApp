@@ -42,13 +42,13 @@ if (!isset($_SESSION['logged'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="add-income.html">Dodaj przychód</a>
+                        <a class="nav-link" aria-current="page" href="add-income.php">Dodaj przychód</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="add-expense.php">Dodaj wydatek</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="balance.html">Przeglądaj bilans</a>
+                        <a class="nav-link" href="balance.php">Przeglądaj bilans</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Ustawienia</a>
@@ -82,14 +82,14 @@ if (!isset($_SESSION['logged'])) {
                 <h1><em>Dodaj wydatek</em></h1>
                 <form action="expense.php" method="post">
                     <div class="input-group mb-3">
-                        <div><label><input type="number" class="form-control" placeholder="Kwota" name="amount"
+                        <div><label for="amount"><input type="number" class="form-control" placeholder="Kwota" id="amount" name="amount"
                                     step="0.01" min="0" max="1000000" required
                                     aria-label="Cash amount (with dot and two decimal places)"></label></div>
 
                     </div>
 
                     <div class="input-group mb-3">
-                        <div><label><input type="date" class="form-control" name="date" id="datepicker" min="2000-01-01"
+                        <div><label for="datepicker"><input type="date" class="form-control" name="date" id="datepicker" min="2000-01-01"
                                     max="2022-12-31" required></label></div>
                     </div>
 
@@ -126,21 +126,21 @@ if (!isset($_SESSION['logged'])) {
                     </div>
 
                     <div class="mb-3">
-                        <label><textarea class="form-control" name="comment" id="exampleFormControlTextarea1"
-                                placeholder="Komentarz(opcjonalnie)" maxlength="150" rows="3"
+                        <label for="comment"><textarea class="form-control" name="comment" id="comment"
+                                placeholder="Komentarz (opcjonalnie)" maxlength="150" rows="3"
                                 cols="50"></textarea></label>
                     </div>
 
                     <div class="form-check">
-                        <label>
-                            <button type="submit" class="btn btn-success">Dodaj</button>
+                        <label for="submit">
+                            <button type="submit" class="btn btn-success" id="submit">Dodaj</button>
                         </label>
                     </div>
 
                 </form>
 
                 <div class="form-check">
-                    <label><a class="btn btn-secondary" href="main-menu.php" role="button">Anuluj</a></label>
+                    <label for="cancel"><a class="btn btn-secondary" href="main-menu.php" role="button" id="cancel">Anuluj</a></label>
                 </div>
 
             </div>

@@ -42,13 +42,13 @@ if (!isset($_SESSION['logged'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="add-income.html">Dodaj przychód</a>
+                        <a class="nav-link" aria-current="page" href="add-income.php">Dodaj przychód</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="add-expense.php">Dodaj wydatek</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="balance.html">Przeglądaj bilans</a>
+                        <a class="nav-link" href="balance.php">Przeglądaj bilans</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Ustawienia</a>
