@@ -3,8 +3,8 @@
 session_start();
 
 if (!isset($_SESSION['logged'])) {
-	header('Location: index.php');
-	exit();
+    header('Location: index.php');
+    exit();
 }
 
 ?>
@@ -37,7 +37,6 @@ if (!isset($_SESSION['logged'])) {
             <a class="navbar-brand" href="main-menu.php">Menu główne</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -52,7 +51,7 @@ if (!isset($_SESSION['logged'])) {
                         <a class="nav-link" href="balance.php">Przeglądaj bilans</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="settings.php">Ustawienia</a>
+                        <a class="nav-link" href="#">Ustawienia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Wyloguj</a>
@@ -78,12 +77,9 @@ if (!isset($_SESSION['logged'])) {
 
     <main>
         <section>
-            <div class="container" style="width: 800px">
+            <div class="container" style="width: 400px">
                 <br><br>
-                <div class="center">
-                    <h2>Co chcesz teraz zrobić?</h2>
-                </div>
-            </div>
+                <h1><em>Ustawienia</em></h1>
 
         </section>
 
@@ -100,6 +96,7 @@ if (!isset($_SESSION['logged'])) {
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
     </script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/today.js"></script>
 
 </body>
 

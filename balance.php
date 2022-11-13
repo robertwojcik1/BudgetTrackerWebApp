@@ -51,7 +51,7 @@ if (!isset($_SESSION['logged'])) {
                         <a class="nav-link" href="balance.php">Przeglądaj bilans</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ustawienia</a>
+                        <a class="nav-link" href="settings.php">Ustawienia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Wyloguj</a>

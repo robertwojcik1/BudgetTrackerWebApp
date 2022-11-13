@@ -51,7 +51,7 @@ if (!isset($_SESSION['logged'])) {
                         <a class="nav-link" href="balance.php">Przeglądaj bilans</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ustawienia</a>
+                        <a class="nav-link" href="settings.php">Ustawienia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Wyloguj</a>
@@ -82,15 +82,15 @@ if (!isset($_SESSION['logged'])) {
                 <h1><em>Dodaj wydatek</em></h1>
                 <form action="expense.php" method="post">
                     <div class="input-group mb-3">
-                        <div><label for="amount"><input type="number" class="form-control" placeholder="Kwota" id="amount" name="amount"
-                                    step="0.01" min="0" max="1000000" required
+                        <div><label for="amount"><input type="number" class="form-control" placeholder="Kwota"
+                                    id="amount" name="amount" step="0.01" min="0" max="1000000" required
                                     aria-label="Cash amount (with dot and two decimal places)"></label></div>
 
                     </div>
 
                     <div class="input-group mb-3">
-                        <div><label for="datepicker"><input type="date" class="form-control" name="date" id="datepicker" min="2000-01-01"
-                                    max="2022-12-31" required></label></div>
+                        <div><label for="datepicker"><input type="date" class="form-control" name="date" id="datepicker"
+                                    min="2000-01-01" max="2022-12-31" required></label></div>
                     </div>
 
                     <div class="mb-3">
@@ -140,7 +140,8 @@ if (!isset($_SESSION['logged'])) {
                 </form>
 
                 <div class="form-check">
-                    <label for="cancel"><a class="btn btn-secondary" href="main-menu.php" role="button" id="cancel">Anuluj</a></label>
+                    <label for="cancel"><a class="btn btn-secondary" href="main-menu.php" role="button"
+                            id="cancel">Anuluj</a></label>
                 </div>
 
             </div>
