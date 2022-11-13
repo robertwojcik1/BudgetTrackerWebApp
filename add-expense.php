@@ -96,9 +96,9 @@ if (!isset($_SESSION['logged'])) {
                     <div class="mb-3">
                         Sposób płatności
                         <select class="form-select" name="payment_method" aria-label="Default select example" required>
-                            <option value="Cash">Gotówka</option>
-                            <option value="Debit Card">Karta debetowa</option>
-                            <option value="Credit Card">Karta kredytowa</option>
+                            <option value="1">Gotówka</option>
+                            <option value="2">Karta debetowa</option>
+                            <option value="3">Karta kredytowa</option>
                         </select>
                     </div>
 
@@ -106,22 +106,22 @@ if (!isset($_SESSION['logged'])) {
                         Kategoria
                         <select class="form-select" name="category" aria-label="Default select example" required>
 
-                            <option value="Food">Jedzenie</option>
-                            <option value="Apartments">Mieszkanie</option>
-                            <option value="Transport">Transport</option>
-                            <option value="Telecommunication">Telekomunikacja</option>
-                            <option value="Health">Opieka zdrowotna</option>
-                            <option value="Clothes">Ubranie</option>
-                            <option value="Hygiene">Higiena</option>
-                            <option value="Kids">Dzieci</option>
-                            <option value="Recreation">Rozrywka</option>
-                            <option value="Trip">Wycieczka</option>
-                            <option value="Books">Książki</option>
-                            <option value="Savings">Oszczędności</option>
-                            <option value="For Retirement">Na złotą jesień, czyli emeryturę</option>
-                            <option value="Debt Repayment">Spłata długów</option>
-                            <option value="Gift">Darowizna</option>
-                            <option value="Another">Inne wydatki</option>
+                            <option value="1">Transport</option>
+                            <option value="2">Książki</option>
+                            <option value="3">Jedzenie</option>
+                            <option value="4">Mieszkanie</option>
+                            <option value="5">Telekomunikacja</option>
+                            <option value="6">Opieka zdrowotna</option>
+                            <option value="7">Ubranie</option>
+                            <option value="8">Higiena</option>
+                            <option value="9">Dzieci</option>
+                            <option value="10">Rozrywka</option>
+                            <option value="11">Wycieczka</option>
+                            <option value="12">Oszczędności</option>
+                            <option value="13">Na złotą jesień, czyli emeryturę</option>
+                            <option value="14">Spłata długów</option>
+                            <option value="15">Darowizna</option>
+                            <option value="16">Inne wydatki</option>
                         </select>
                     </div>
 

@@ -10,7 +10,6 @@ if (!isset($_SESSION['logged'])) {
 $user_id = $_SESSION['user_id'];
 $amount = $_POST['amount'];
 $date = $_POST['date'];
-$payment_method = $_POST['payment_method'];
 $category = $_POST['category'];
 $comment = $_POST['comment'];
 
@@ -23,7 +22,7 @@ $connect = new mysqli($host, $db_user, $db_password, $db_name);
 if ($connect->connect_errno != 0) {
     throw new Exception(mysqli_connect_errno());
 } else {
-    if ($connect->query("INSERT INTO expenses VALUES (NULL, '$user_id', '$category', '$payment_method', '$amount', '$date', '$comment');")) {
+    if ($connect->query("INSERT INTO incomes VALUES (NULL, '$user_id', '$category', '$amount', '$date', '$comment');")) {
         header('Location: main-menu.php');
     } else {
         throw new Exception($connect->error);
@@ -35,4 +34,3 @@ if ($connect->connect_errno != 0) {
 }
 
 ?>
-

@@ -78,31 +78,31 @@ if (!isset($_SESSION['logged'])) {
 		<section>
 			<div class="container" style="width: 400px">
 				<br><br><h1><em>Dodaj przychód</em></h1>
-				<form>
+				<form action="income.php" method="post">
 
 					<div class="input-group mb-3">
-						<div><label for="amount"><input type="number" class="form-control" placeholder="Kwota" id="amount" step="0.01" min="0"
+						<div><label for="amount"><input type="number" class="form-control" placeholder="Kwota" id="amount" name="amount" step="0.01" min="0"
 									max="1000000" required
 									aria-label="Cash amount (with dot and two decimal places)"></label></div>
 					</div>
 
 					<div class="input-group mb-3">
-						<div><label for="datepicker"><input type="date" class="form-control" id="datepicker" min="2000-01-01" max="2022-12-31"
+						<div><label for="datepicker"><input type="date" name="date" class="form-control" id="datepicker" min="2000-01-01" max="2022-12-31"
 									required></label></div>
 					</div>
 
 					<div class="mb-3">
 						Kategoria przychodu
-						<select class="form-select" aria-label="Default select example">
-							<option value="Salary">Wynagrodzenie</option>
-							<option value="BankInterest">Odsetki bankowe</option>
-							<option value="Allegro">Sprzedaż na allegro</option>
-							<option value="Other">Inne</option>
+						<select class="form-select" name="category" aria-label="Default select example">
+							<option value="1">Wynagrodzenie</option>
+							<option value="2">Odsetki bankowe</option>
+							<option value="3">Sprzedaż na allegro</option>
+							<option value="4">Inne</option>
 						</select>
 					</div>
 
 					<div class="mb-3">
-						<label for="comment"><textarea class="form-control" id="comment"
+						<label for="comment"><textarea class="form-control" id="comment" name="comment"
 								placeholder="Komentarz (opcjonalnie)" maxlength="150" rows="3"
 								cols="35"></textarea></label>
 					</div>
