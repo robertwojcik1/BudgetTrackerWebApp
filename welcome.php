@@ -9,10 +9,10 @@ if (!isset($_SESSION['registration_success'])) {
     unset($_SESSION['registration_success']);
 }
 
-if (isset($_SESSION['fr_name'])) unset($_SESSION['fr_name']);
-if (isset($_SESSION['fr_email'])) unset($_SESSION['fr_email']);
-if (isset($_SESSION['fr_password1'])) unset($_SESSION['fr_password1']);
-if (isset($_SESSION['fr_password2'])) unset($_SESSION['fr_password2']);
+if (isset($_SESSION['reg_name'])) unset($_SESSION['reg_name']);
+if (isset($_SESSION['reg_email'])) unset($_SESSION['reg_email']);
+if (isset($_SESSION['reg_password1'])) unset($_SESSION['reg_password1']);
+if (isset($_SESSION['reg_password2'])) unset($_SESSION['reg_password2']);
 
 if (isset($_SESSION['e_name'])) unset($_SESSION['e_name']);
 if (isset($_SESSION['e_email'])) unset($_SESSION['e_email']);
@@ -60,10 +60,8 @@ if (isset($_SESSION['e_password'])) unset($_SESSION['e_password']);
     <main>
         <section>
             <div class="container" style="width: 400px">
-                Dziękujemy za rejestrację w serwisie! Możesz już zalogować się na swoje konto!<br /><br />
-
+                Witaj! Dziękujemy za rejestrację w serwisie! Możesz już zalogować się na swoje konto!
                 <a href="index.php">Zaloguj się na swoje konto!</a>
-                <br /><br />
             </div>
         </section>
 

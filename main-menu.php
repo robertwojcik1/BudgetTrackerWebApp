@@ -79,7 +79,6 @@ if (!isset($_SESSION['logged'])) {
     <main>
         <section>
             <div class="container" style="width: 800px">
-                <br><br>
                 <div class="center">
                     <h2>Co chcesz teraz zrobić?</h2>
                 </div>

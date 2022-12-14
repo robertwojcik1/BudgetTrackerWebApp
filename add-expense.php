@@ -78,7 +78,6 @@ if (!isset($_SESSION['logged'])) {
     <main>
         <section>
             <div class="container" style="width: 400px">
-                <br><br>
                 <h1><em>Dodaj wydatek</em></h1>
                 <form action="expense.php" method="post">
                     <div class="input-group mb-3">

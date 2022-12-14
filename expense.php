@@ -31,8 +31,7 @@ if ($connect->connect_errno != 0) {
     $connect->close();
 }
 } catch (Exception $e) {
-    echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy o rejestrację w innym terminie!</span>';
+    echo '<span style="color:red;">Nie udało się dodać wydatku!</span>';
 }
 
 ?>
-

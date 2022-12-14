@@ -5,7 +5,7 @@ session_start();
 if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
 	header('Location: main-menu.php');
 	exit();
-}
+} 
 
 ?>
 
@@ -13,17 +13,17 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
 <html lang="pl">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Aplikacja budżetowa MyBudget</title>
 
-    <meta name="description" content="Aplikacja do zarządzania budżetem osobistym" />
-    <meta name="keywords" content="budżet, przychody, wydatki" />
+    <meta name="description" content="Aplikacja do zarządzania budżetem osobistym">
+    <meta name="keywords" content="budżet, przychody, wydatki">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -48,31 +48,35 @@ if ((isset($_SESSION['logged'])) && ($_SESSION['logged'] == true)) {
 
     <main>
         <section>
-            <div class="container" style="width: 400px">
+            <div class="container">
                 <h2>Logowanie</h2>
 
                 <form action="login.php" method="post">
                     <div class="mb-3">
-                        <label class="form-label">E-mail</label><br>
+                        E-mail
                         <label for="exampleInputEmail1" class="form-label"></label>
                         <input type="email" class="form-control" placeholder="Wpisz swój adres e-mail" name="login"
                             required id="exampleInputEmail1" aria-describedby="exampleInputEmail1">
                     </div>
                     <div class="mb-3">
-                        Hasło<br>
+                        Hasło
                         <label for="exampleInputPassword1" class="form-label"></label>
                         <input type="password" class="form-control" name="password" placeholder="Wpisz swoje hasło"
                             id="exampleInputPassword1" required>
                     </div>
+
                     <div class="button"><label><button type="submit" class="btn btn-success">Zaloguj</button></label>
                     </div>
+
                 </form>
-                <br>
-                <br>
+
                 <div class="text">Nie masz konta? Zarejestruj się.</div>
+
+
                 <div class="button"><label><a class="btn btn-secondary" href="register.php"
                             role="button">Rejestracja</a></label>
                 </div>
+
 
             </div>
 

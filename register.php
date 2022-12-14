@@ -40,10 +40,10 @@ if (isset($_POST['email'])) {
 
 	$password_hash = password_hash($password1, PASSWORD_DEFAULT);
 
-	$_SESSION['fr_name'] = $name;
-	$_SESSION['fr_email'] = $email;
-	$_SESSION['fr_password1'] = $password1;
-	$_SESSION['fr_password2'] = $password2;
+	$_SESSION['reg_name'] = $name;
+	$_SESSION['reg_email'] = $email;
+	$_SESSION['reg_password1'] = $password1;
+	$_SESSION['reg_password2'] = $password2;
 
 	require_once "connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
@@ -147,7 +147,7 @@ if (isset($_POST['email'])) {
 
     <main>
         <section>
-            <div class="container" style="width: 800px">
+            <div class="container">
                 <div class="center">
                     <h1><em>Rejestracja</em></h1>
                     <form method="post">
@@ -190,7 +190,7 @@ if (isset($_POST['email'])) {
                             <input type="password" class="form-control" name="password2" value="" id="password2"
                                 required>
                         </div>
-                        <label><button type="submit" class="btn btn-success">Załóz konto</button></label><br><br>
+                        <label><button type="submit" class="btn btn-success">Załóz konto</button></label>
                     </form>
                     <div>
                         <label><a class="btn btn-secondary" href="index.php" role="button">Anuluj</a></label>

@@ -52,15 +52,15 @@ button {
     margin-right: auto;
     width: 200px;
     height: 40px;
+    display: block;
 }
 
 .container {
-    background-color: white;
+    background-color: #d5d5d5;
     margin-left: auto;
     margin-right: auto;
     min-height: 100%;
     height: auto !important;
-
 }
 
 .container-sm {
@@ -98,6 +98,7 @@ button {
     margin-right: auto;
     margin-top: 15px;
     padding: 10px;
+    display: block;
 }
 
 .menu {
@@ -115,6 +116,7 @@ button {
 .text {
     text-align: center;
     font-size: 14px;
+    display: block;
 }
 
 .window {

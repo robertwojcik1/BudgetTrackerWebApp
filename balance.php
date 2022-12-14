@@ -5,6 +5,26 @@ session_start();
 if (!isset($_SESSION['logged'])) {
     header('Location: index.php');
     exit();
+} else {
+    require_once "connect.php";
+    $connect = new mysqli($host, $db_user, $db_password, $db_name);
+
+    $userId = $_SESSION['user_id'];
+    $date1 = '2022-12-01';
+    $date2 = '2022-12-31';
+
+    $getIncomeCategoryName = $connect->query("SELECT name
+    FROM incomes_category_assigned_to_users
+    WHERE user_id='$userId'");
+
+    $getExpenseCategoryName = $connect->query("SELECT name
+    FROM expenses_category_assigned_to_users
+    WHERE user_id='$userId'");
+
+    $totalIncomeSum = $connect->query("SELECT SUM(amount)
+    FROM incomes
+    WHERE user_id='$userId' AND date_of_income BETWEEN '$date1' AND '$date2'");
+    $total = $totalIncomeSum->fetch_column();
 }
 
 ?>
@@ -78,7 +98,6 @@ if (!isset($_SESSION['logged'])) {
     <main>
         <section>
             <div class="container" style="width: 1200px">
-                <br><br>
                 <h1><em>Bilans z wybranego okresu</em></h1>
                 <form>
                     <div class="dateRange">
@@ -91,7 +110,7 @@ if (!isset($_SESSION['logged'])) {
                                 data-bs-whatever="@mdo">Niestandardowy</option>
                         </select>
                     </div>
-                </form> <br>
+                </form>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -124,12 +143,12 @@ if (!isset($_SESSION['logged'])) {
 
                 <div class="window">
                     <h2>Przychody</h2>
-                    <ul>
-                        <li> Wynagrodzenie: 5000<br /> data 01-01-2022 </li>
-                        <li> Sprzedaż na allegro: 1200<br /> data 03-04-2022, komentarz: komputer </li>
-                        <li> Odsetki bankowe: 150 <br /> data 05-06-2022, komentarz: mBank </li>
-                    </ul>
-                    <b>Suma przychodów: 6350</b>
+                    <?php
+                                            while ($name = $getIncomeCategoryName ->fetch_column())
+                                            {
+                        echo $name . "<br>" . $total;       
+                                            }
+                                        ?>
                 </div>
 
                 <div class="window">
@@ -153,12 +172,13 @@ if (!isset($_SESSION['logged'])) {
                 </div>
             </div>
         </section>
-
-        <footer>
-            <div id="footer">&copy; 2022 MyBudget.pl</div>
-        </footer>
-
     </main>
+
+    <footer>
+        <div id="footer">&copy; 2022 MyBudget.pl</div>
+    </footer>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">

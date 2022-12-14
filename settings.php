@@ -78,7 +78,6 @@ if (!isset($_SESSION['logged'])) {
     <main>
         <section>
             <div class="container" style="width: 400px">
-                <br><br>
                 <h1><em>Ustawienia</em></h1>
 
         </section>

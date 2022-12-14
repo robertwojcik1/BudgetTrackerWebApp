@@ -31,7 +31,6 @@ if (!isset($_SESSION['logged'])) {
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="main-menu.php">Menu główne</a>
@@ -78,7 +77,6 @@ if (!isset($_SESSION['logged'])) {
     <main>
         <section>
             <div class="container" style="width: 400px">
-                <br><br>
                 <h1><em>Dodaj przychód</em></h1>
                 <form action="income.php" method="post">
 
